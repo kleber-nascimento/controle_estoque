@@ -42,6 +42,7 @@ Atualmente, ele é projetado para ser usado por controladores de estoque de mate
 ---
 
 ## Estrutura de Arquivos
+```
 Controle_Estoque/
 │
 ├── static/               # Arquivos estáticos
@@ -60,7 +61,7 @@ Controle_Estoque/
 ├── main.py               # Arquivo principal para executar o sistema
 ├── README.md             # Documentação do sistema
 └── users.json            # Base de dados em JSON para os usuários
-
+```
 ---
 
 ## Contribuições
