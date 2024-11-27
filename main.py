@@ -55,12 +55,19 @@ def login():
 def addUser():
     global logon 
     user = []
+    nomeuser = request.form.get('nomeuser')
     email = request.form.get('email')
     password = request.form.get('password')
+    cpf = request.form.get('cpf')
+    telefone = request.form.get('telefone')
+
     user = [
         {
+            "nomeuser": nomeuser,
             "email": email,
-            "password": password
+            "password": password,
+            "cpf": cpf,
+            "telefone": telefone
         }
     ]
     with open('users.json') as userTemp:
@@ -69,7 +76,7 @@ def addUser():
     newUser = user + users
 
     with open('users.json', 'w') as recordTemp:
-        json.dump(newUser, recordTemp, indent=4)
+        json.dump(newUser, recordTemp, indent=7)
     logon = True
     flash(f'{email} Cadastrado com Sucesso!')
     return redirect('/adm')
@@ -81,14 +88,14 @@ def delUser():
     logon = True
     user = request.form.get('delUser')
     userDict = ast.literal_eval(user)
-    name = userDict['email']
+    name = userDict['nomeuser']
     with open('users.json') as tempUsers:
         userJson = json.load(tempUsers)
         for c in userJson:
             if c == userDict:
                 userJson.remove(userDict)
                 with open('users.json', 'w') as willbeDelUser:
-                    json.dump(userJson, willbeDelUser, indent=4)
+                    json.dump(userJson, willbeDelUser, indent=7)
 
    
     print(type(userDict))

@@ -1,14 +1,9 @@
 [
-    {
-        "email": "joaquim@joca.com",
-        "password": "123"
-    },
-    {
-        "email": "klebergnasc@gmail.com",
-        "password": "123"
-    },
-    {
-        "email": "joao@gmailcom",
-        "password": "123"
-    }
+       {
+              "nomeuser": "Kleber Gomes do Nascimento",
+              "email": "klebergnasc@gmail.com",
+              "password": "1234",
+              "cpf": "23456789011",
+              "telefone": "12981812300"
+       }
 ]
